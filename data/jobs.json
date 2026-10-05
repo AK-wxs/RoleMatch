@@ -1,0 +1,141 @@
+
+[
+  {
+    "id": 1,
+    "title": "AI / ML Intern",
+    "company": "TechNova",
+    "location": "Hyderabad",
+    "type": "Internship",
+    "skills": [
+      "python",
+      "machine learning",
+      "numpy",
+      "pandas",
+      "scikit-learn",
+      "sql"
+    ],
+    "description": "Work on machine learning models, data preprocessing and AI projects.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=AI%20ML%20Intern&location=Hyderabad"
+  },
+  {
+    "id": 2,
+    "title": "Software Development Intern",
+    "company": "CodeSphere",
+    "location": "Hyderabad",
+    "type": "Internship",
+    "skills": [
+      "python",
+      "java",
+      "javascript",
+      "git",
+      "github",
+      "sql"
+    ],
+    "description": "Develop software applications and contribute to real-world development projects.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Software%20Development%20Intern&location=Hyderabad"
+  },
+  {
+    "id": 3,
+    "title": "Frontend Developer Intern",
+    "company": "WebWorks",
+    "location": "Remote",
+    "type": "Internship",
+    "skills": [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "typescript",
+      "git"
+    ],
+    "description": "Build responsive and interactive web applications using modern frontend technologies.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Frontend%20Developer%20Intern&f_WT=2"
+  },
+  {
+    "id": 4,
+    "title": "Data Analyst Intern",
+    "company": "DataPulse",
+    "location": "Hyderabad",
+    "type": "Internship",
+    "skills": [
+      "python",
+      "sql",
+      "pandas",
+      "numpy",
+      "data analysis",
+      "power bi"
+    ],
+    "description": "Analyze datasets, create reports and generate insights using data.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Data%20Analyst%20Intern&location=Hyderabad"
+  },
+  {
+    "id": 5,
+    "title": "Cloud Engineering Intern",
+    "company": "CloudForge",
+    "location": "Remote",
+    "type": "Internship",
+    "skills": [
+      "aws",
+      "docker",
+      "python",
+      "git",
+      "github"
+    ],
+    "description": "Assist with cloud infrastructure, deployment and automation workflows.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Cloud%20Engineering%20Intern&f_WT=2"
+  },
+  {
+    "id": 6,
+    "title": "Full Stack Developer Intern",
+    "company": "DevLabs",
+    "location": "Hyderabad",
+    "type": "Internship",
+    "skills": [
+      "javascript",
+      "typescript",
+      "react",
+      "node.js",
+      "mongodb",
+      "html",
+      "css",
+      "git"
+    ],
+    "description": "Develop full-stack web applications using modern JavaScript technologies.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Full%20Stack%20Developer%20Intern&location=Hyderabad"
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning Intern",
+    "company": "NeuralWorks",
+    "location": "Bangalore",
+    "type": "Internship",
+    "skills": [
+      "python",
+      "machine learning",
+      "deep learning",
+      "tensorflow",
+      "pytorch",
+      "numpy",
+      "pandas"
+    ],
+    "description": "Experiment with machine learning and deep learning models for real-world applications.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Machine%20Learning%20Intern&location=Bangalore"
+  },
+  {
+    "id": 8,
+    "title": "Backend Developer Intern",
+    "company": "ServerStack",
+    "location": "Remote",
+    "type": "Internship",
+    "skills": [
+      "python",
+      "sql",
+      "mongodb",
+      "docker",
+      "git",
+      "github"
+    ],
+    "description": "Build backend services, APIs and database-driven applications.",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=Backend%20Developer%20Intern&f_WT=2"
+  }
+]

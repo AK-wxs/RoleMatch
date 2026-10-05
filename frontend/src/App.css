@@ -1,0 +1,2073 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #08080d;
+  color: white;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 15%,
+      rgba(109, 70, 255, 0.16),
+      transparent 28%
+    ),
+    #08080d;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.logo span:last-child {
+  opacity: 0.55;
+}
+
+.logo-icon {
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+
+  color: #9d9da8;
+  font-size: 14px;
+}
+
+.nav-links a {
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.signin-btn {
+  background: transparent;
+  border: none;
+  color: #c9c9d2;
+}
+
+.signup-btn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  padding: 11px 19px;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 720px;
+  padding: 100px 7%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 58%;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: #bdbdc8;
+
+  font-size: 13px;
+
+  margin-bottom: 25px;
+}
+
+.badge span {
+  color: #a88cff;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 8vw, 105px);
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #9c7cff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.hero-content > p {
+  max-width: 570px;
+
+  color: #9d9da8;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 22px;
+
+  border-radius: 11px;
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.primary-btn {
+  border: none;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #7557ff,
+    #5634dc
+  );
+
+  box-shadow:
+    0 15px 40px rgba(100, 65, 255, 0.22);
+
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn span {
+  margin-left: 12px;
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.trust {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 45px;
+
+  color: #858591;
+  font-size: 13px;
+}
+
+.trust strong {
+  color: white;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars div {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #202027;
+
+  border: 2px solid #08080d;
+
+  margin-left: -7px;
+}
+
+.avatars div:first-child {
+  margin-left: 0;
+}
+
+
+/* =========================================
+   MATCH CARD
+========================================= */
+
+.match-card {
+  position: absolute;
+
+  right: 7%;
+  top: 170px;
+
+  width: 390px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 20px;
+
+  background: rgba(22, 22, 30, 0.75);
+
+  backdrop-filter: blur(25px);
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.5);
+
+  transform: rotate(2deg);
+
+  z-index: 3;
+}
+
+.card-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.small-label,
+.section-label {
+  color: #8371db;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.match-card h3 {
+  font-size: 21px;
+  margin-top: 7px;
+}
+
+.match-card p {
+  color: #858591;
+
+  font-size: 13px;
+
+  margin-top: 5px;
+}
+
+.match-score {
+  text-align: center;
+
+  padding: 8px 12px;
+
+  border-radius: 12px;
+
+  background: rgba(99, 255, 160, 0.08);
+}
+
+.match-score strong {
+  display: block;
+
+  color: #71e99b;
+
+  font-size: 20px;
+}
+
+.match-score span {
+  color: #6f987d;
+  font-size: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 25px 0;
+}
+
+.skills span {
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  color: #b9b9c3;
+
+  font-size: 12px;
+}
+
+.match-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding-top: 17px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-footer span {
+  color: #70707b;
+  font-size: 11px;
+}
+
+.match-footer button {
+  border: none;
+  background: none;
+
+  color: #a68cff;
+}
+
+
+/* =========================================
+   GLOWS
+========================================= */
+
+.hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.glow-one {
+  width: 300px;
+  height: 300px;
+
+  background: rgba(99, 65, 255, 0.16);
+
+  right: 20%;
+  top: 10%;
+}
+
+.glow-two {
+  width: 180px;
+  height: 180px;
+
+  background: rgba(0, 174, 255, 0.08);
+
+  right: 5%;
+  bottom: 10%;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-section {
+  padding: 120px 7%;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-heading {
+  max-width: 700px;
+}
+
+.section-heading h2,
+.features-section h2,
+.cta-section h2 {
+  font-size: 46px;
+
+  letter-spacing: -2px;
+
+  margin: 15px 0;
+}
+
+.section-heading h2 span {
+  color: #9276ff;
+}
+
+.section-heading p,
+.features-section > div > p,
+.cta-section p {
+  color: #858591;
+
+  line-height: 1.7;
+}
+
+.steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-top: 60px;
+}
+
+.step-card {
+  position: relative;
+
+  padding: 35px;
+
+  min-height: 260px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.step-number {
+  color: #454550;
+  font-size: 12px;
+}
+
+.step-icon {
+  font-size: 30px;
+
+  margin:
+    35px 0 20px;
+}
+
+.step-card h3 {
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #777783;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features-section {
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 100px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.feature-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.feature {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 24px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.feature > span {
+  font-size: 25px;
+}
+
+.feature h3 {
+  margin-bottom: 5px;
+}
+
+.feature p {
+  color: #777783;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+  margin:
+    40px 7% 100px;
+
+  padding: 80px;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 25px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(95, 62, 255, 0.12),
+      transparent 60%
+    ),
+    rgba(255, 255, 255, 0.025);
+}
+
+.cta-section .primary-btn {
+  margin-top: 30px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding:
+    35px 7%;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #656570;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   UPLOAD MODAL
+========================================= */
+
+.upload-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0, 0, 0, 0.72);
+
+  backdrop-filter: blur(12px);
+
+  animation:
+    fadeIn 0.2s ease;
+}
+
+.upload-modal {
+  width: min(560px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 40px;
+
+  position: relative;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  background: #111119;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.6);
+
+  animation:
+    modalUp 0.25s ease;
+}
+
+.close-upload {
+  position: absolute;
+
+  right: 20px;
+  top: 18px;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: #aaa;
+
+  font-size: 22px;
+}
+
+.close-upload:hover {
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  color: white;
+}
+
+
+/* =========================================
+   UPLOAD HEADER
+========================================= */
+
+.upload-header {
+  text-align: center;
+}
+
+.upload-icon {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  margin:
+    0 auto 20px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(117, 87, 255, 0.12);
+
+  font-size: 25px;
+}
+
+.upload-header h2 {
+  font-size: 36px;
+
+  letter-spacing: -1.5px;
+
+  margin:
+    10px 0;
+}
+
+.upload-header h2 span {
+  color: #9a7dff;
+}
+
+.upload-header p {
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  color: #858591;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   DROP ZONE
+========================================= */
+
+.drop-zone {
+  margin-top: 30px;
+
+  padding: 45px 20px;
+
+  text-align: center;
+
+  border:
+    1px dashed rgba(145, 120, 255, 0.4);
+
+  border-radius: 17px;
+
+  background:
+    rgba(117, 87, 255, 0.035);
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
+}
+
+.drop-zone:hover {
+  border-color:
+    rgba(145, 120, 255, 0.8);
+
+  background:
+    rgba(117, 87, 255, 0.08);
+
+  transform:
+    translateY(-2px);
+}
+
+.drop-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin:
+    0 auto 15px;
+
+  border-radius: 13px;
+
+  background:
+    rgba(117, 87, 255, 0.12);
+
+  color: #a88cff;
+
+  font-size: 24px;
+}
+
+.drop-zone h3 {
+  margin-bottom: 8px;
+
+  font-size: 17px;
+}
+
+.drop-zone p {
+  color: #777783;
+
+  font-size: 13px;
+}
+
+.drop-zone p span {
+  color: #a88cff;
+}
+
+.drop-zone small {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #555561;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   SELECTED FILE
+========================================= */
+
+.selected-file {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 18px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+.file-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(117, 87, 255, 0.12);
+}
+
+.file-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.file-info strong {
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.file-info span {
+  color: #666672;
+
+  font-size: 11px;
+}
+
+.remove-file {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  color: #888;
+
+  font-size: 18px;
+}
+
+.remove-file:hover {
+  color: white;
+}
+
+
+/* =========================================
+   ANALYZE BUTTON
+========================================= */
+
+.analyze-btn {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7557ff,
+      #5634dc
+    );
+
+  color: white;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 15px 35px rgba(100, 65, 255, 0.2);
+
+  transition: 0.2s ease;
+}
+
+.analyze-btn:hover {
+  transform:
+    translateY(-2px);
+}
+
+.analyze-btn span {
+  margin-left: 12px;
+}
+
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.upload-security {
+  margin-top: 20px;
+
+  text-align: center;
+
+  color: #555561;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ANALYSIS STATE
+========================================= */
+
+.analysis-state {
+  text-align: center;
+
+  padding:
+    25px 5px 10px;
+}
+
+.analysis-state h2 {
+  font-size: 34px;
+
+  letter-spacing: -1.5px;
+
+  margin:
+    12px 0;
+}
+
+.analysis-state h2 span {
+  color: #9a7dff;
+}
+
+.analysis-state > p {
+  max-width: 430px;
+
+  margin:
+    0 auto;
+
+  color: #858591;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SPINNER
+========================================= */
+
+.analysis-spinner {
+  width: 70px;
+  height: 70px;
+
+  display: grid;
+  place-items: center;
+
+  margin:
+    0 auto 25px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(117, 87, 255, 0.12);
+
+  color: #a88cff;
+
+  font-size: 30px;
+
+  animation:
+    pulse 1.2s infinite ease-in-out;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.analysis-progress {
+  width: 100%;
+
+  height: 6px;
+
+  margin:
+    30px 0 15px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+}
+
+.progress-bar {
+  height: 100%;
+
+  width: 40%;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7557ff,
+      #a88cff
+    );
+
+  animation:
+    progress 2.5s infinite ease-in-out;
+}
+
+.analysis-state small {
+  color: #555561;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+  place-items: center;
+
+  margin:
+    0 auto 22px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(99, 255, 160, 0.1);
+
+  border:
+    1px solid rgba(99, 255, 160, 0.2);
+
+  color: #71e99b;
+
+  font-size: 30px;
+
+  animation:
+    successPop 0.4s ease;
+}
+
+
+/* =========================================
+   RESUME SCORE
+========================================= */
+
+.resume-score {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin:
+    25px 0;
+}
+
+.score-circle {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    5px solid #7557ff;
+
+  background:
+    rgba(117, 87, 255, 0.08);
+}
+
+.score-circle strong {
+  font-size: 25px;
+}
+
+.score-circle span {
+  color: #777783;
+
+  font-size: 10px;
+}
+
+.score-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 5px;
+}
+
+.score-info strong {
+  font-size: 15px;
+}
+
+.score-info span {
+  color: #71e99b;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   DETECTED SKILLS
+========================================= */
+
+.detected-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin:
+    20px 0;
+}
+
+.detected-skills span {
+  padding:
+    8px 12px;
+
+  border-radius: 8px;
+
+  background:
+    rgba(117, 87, 255, 0.1);
+
+  border:
+    1px solid rgba(117, 87, 255, 0.18);
+
+  color: #b9aaff;
+
+  font-size: 11px;
+}
+
+.analysis-meta {
+  color: #666672 !important;
+
+  font-size: 11px !important;
+
+  margin-top: 10px !important;
+}
+
+.analysis-meta strong {
+  color: #aaa;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.upload-error {
+  margin-top: 15px;
+
+  padding:
+    12px 15px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 80, 80, 0.08);
+
+  border:
+    1px solid rgba(255, 80, 80, 0.2);
+
+  color: #ff8585;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes successPop {
+  from {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .match-card {
+    position: relative;
+
+    right: auto;
+    top: auto;
+
+    margin-top: 70px;
+
+    width: 100%;
+
+    transform: none;
+  }
+
+  .steps,
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section {
+    gap: 50px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .signup-btn {
+    display: none;
+  }
+
+  .hero,
+  .how-section,
+  .features-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-content > p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .cta-section {
+    margin:
+      30px 5% 70px;
+
+    padding:
+      50px 25px;
+  }
+
+  .section-heading h2,
+  .features-section h2,
+  .cta-section h2 {
+    font-size: 35px;
+  }
+
+  .upload-modal {
+    padding:
+      30px 20px;
+  }
+
+  .upload-header h2,
+  .analysis-state h2 {
+    font-size: 30px;
+  }
+
+  .drop-zone {
+    padding:
+      35px 15px;
+  }
+}
+/* =========================================
+   JOB MATCHES DASHBOARD
+========================================= */
+
+.matches-page {
+  min-height: 100vh;
+  padding: 90px 7% 120px;
+
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(109, 70, 255, 0.14),
+      transparent 30%
+    ),
+    #08080d;
+
+  color: white;
+}
+
+
+/* =========================================
+   MATCHES HEADER
+========================================= */
+
+.matches-header {
+  max-width: 1100px;
+  margin: 0 auto 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.matches-header h1 {
+  margin-top: 12px;
+
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+.matches-header h1 span {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #9c7cff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.matches-header p {
+  margin-top: 15px;
+
+  color: #858591;
+  font-size: 15px;
+}
+
+.close-matches {
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #cfcfd8;
+
+  transition: 0.2s ease;
+}
+
+.close-matches:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+
+/* =========================================
+   RESUME SUMMARY
+========================================= */
+
+.matches-summary {
+  max-width: 1100px;
+  margin: 0 auto 55px;
+
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  gap: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  backdrop-filter: blur(20px);
+}
+
+.summary-score {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 16px;
+}
+
+.summary-circle {
+  min-width: 125px;
+  height: 92px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(117, 87, 255, 0.16),
+      rgba(117, 87, 255, 0.05)
+    );
+
+  border:
+    1px solid rgba(117, 87, 255, 0.28);
+
+  box-shadow:
+    0 10px 35px rgba(117, 87, 255, 0.08);
+}
+
+.summary-circle strong {
+  font-size: 38px;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+}
+
+.summary-circle span {
+  margin-top: 6px;
+
+  color: #777783;
+
+  font-size: 10px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   SUMMARY SKILLS
+========================================= */
+
+.summary-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary-label {
+  color: #8371db;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.summary-skills .summary-label {
+  margin-bottom: 15px;
+}
+
+.summary-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.summary-skill-list span {
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background:
+    rgba(117, 87, 255, 0.1);
+
+  border:
+    1px solid rgba(117, 87, 255, 0.18);
+
+  color: #b9aaff;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   JOB RESULTS
+========================================= */
+
+.job-results {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.job-results-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.job-results-heading h2 {
+  margin-top: 10px;
+
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.job-count {
+  color: #777783;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   JOB LIST
+========================================= */
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   JOB CARD
+========================================= */
+
+.job-card {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  column-gap: 25px;
+
+  padding: 25px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(117, 87, 255, 0.35);
+
+  background:
+    rgba(117, 87, 255, 0.035);
+}
+
+
+/* =========================================
+   JOB MAIN
+========================================= */
+
+.job-main {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.job-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(117, 87, 255, 0.12);
+
+  font-size: 20px;
+}
+
+.job-info {
+  flex: 1;
+}
+
+.job-info h3 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.job-company {
+  color: #a88cff;
+  font-size: 13px;
+}
+
+.job-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 10px;
+
+  color: #777783;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   JOB MATCH SCORE
+========================================= */
+
+.job-match {
+  min-width: 75px;
+
+  padding: 10px 12px;
+
+  align-self: start;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+  background:
+    rgba(99, 255, 160, 0.07);
+
+  border:
+    1px solid rgba(99, 255, 160, 0.12);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.job-main {
+  min-width: 0;
+}
+
+.job-details {
+  grid-column: 1 / -1;
+}
+.job-match strong {
+  display: block;
+
+  color: #71e99b;
+
+  font-size: 20px;
+}
+
+.job-match span {
+  color: #6f987d;
+
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   JOB DETAILS
+========================================= */
+
+.job-details {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.job-details > p {
+  color: #858591;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.job-skills {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+}
+
+.skill-heading {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #666672;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.skill-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.skill-tags span {
+  padding: 7px 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+.skill-tags .matched {
+  background:
+    rgba(99, 255, 160, 0.07);
+
+  border:
+    1px solid rgba(99, 255, 160, 0.12);
+
+  color: #8ee6ac;
+}
+
+.skill-tags .missing {
+  background:
+    rgba(255, 170, 70, 0.07);
+
+  border:
+    1px solid rgba(255, 170, 70, 0.12);
+
+  color: #e4a96a;
+}
+
+
+/* =========================================
+   VIEW JOB BUTTON
+========================================= */
+
+.view-job-btn {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 12px 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #b9aaff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.view-job-btn:hover {
+  background:
+    rgba(117, 87, 255, 0.12);
+
+  border-color:
+    rgba(117, 87, 255, 0.3);
+}
+
+.view-job-btn span {
+  margin-left: 8px;
+}
+
+
+/* =========================================
+   DASHBOARD RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .matches-page {
+    padding:
+      60px 5% 90px;
+  }
+
+  .matches-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .matches-header h1 {
+    font-size: 48px;
+  }
+
+  .matches-summary {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .summary-skill-list {
+    justify-content: center;
+  }
+
+  .job-results-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .job-skills {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .matches-header h1 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .job-card {
+    padding: 20px;
+  }
+
+  .job-main {
+    flex-wrap: wrap;
+  }
+
+  .job-card {
+    grid-template-columns: 1fr;
+  }
+
+  .job-match {
+    justify-self: start;
+
+    margin-top: 15px;
+  }
+
+}
